@@ -67,7 +67,7 @@ def create_plot(S_vals, K, T, r, sigma):
 # Streamlit App
 st.set_page_config(page_title="Black-Scholes Call Option Animator", layout="wide")
 
-st.title("📈 Black-Scholes Call Option Price Animation")
+st.title(" Black-Scholes Call Option Price Animation")
 st.markdown("Watch how the call option price evolves as time to maturity changes")
 
 # Sidebar for parameters
@@ -91,9 +91,9 @@ T_vals = np.linspace(0, T_max, num_frames)
 # Animation controls
 col1, col2, col3 = st.columns([1, 1, 2])
 with col1:
-    animate = st.button("▶️ Start Animation", use_container_width=True)
+    animate = st.button(" Start Animation", use_container_width=True)
 with col2:
-    stop = st.button("⏸️ Stop", use_container_width=True)
+    stop = st.button(" Stop", use_container_width=True)
 with col3:
     manual_mode = st.checkbox("Manual Mode (use slider)")
 
@@ -125,7 +125,7 @@ if manual_mode:
 plot_placeholder = st.empty()
 
 # Display current parameters
-with st.expander("ℹ️ Current Parameters"):
+with st.expander(" Current Parameters"):
     col1, col2, col3, col4 = st.columns(4)
     with col1:
         st.metric("Strike Price", f"${K:.2f}")
